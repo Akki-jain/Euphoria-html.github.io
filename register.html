@@ -18,31 +18,95 @@
 <br><br><br>
 
 <center>
-<form>
+<form method="POST" action="index.html" onsubmit="return val()">
     <img src="Euphoria1.png" height=75 width=75 valign=bottom><font size=7 color=FE7E6D>Euphoria</font>
     <br><br><br>
-    First Name:&emsp;&emsp; <input type="text" name="fname">
+    First Name:&emsp;&emsp; <input type="text" id="fname" >
     <br><br>
-    Last Name:&emsp;&emsp; <input type="text" name="lname">
+    Last Name:&emsp;&emsp; <input type="text" id="lname">
     <br><br>
     Gender:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; <br><br>
-    Male<input type="radio" name="gender">&ensp;
-    Female<input type="radio" name="gender">&ensp;
-    Prefer Not to say<input type="radio" name="gender">
+    Male<input type="radio" id="male" value="male" name="gender">&ensp;
+    Female<input type="radio" id="female" value="Female" name="gender">&ensp;
+    Prefer Not to say<input type="radio" value="No preference" id="nopref" name="gender">
+
     <br><br>
-    Address:&emsp;&emsp;&emsp; <input type="text" name="address">
+    Address:&emsp;&emsp;&emsp; <input type="text" id="address" >
     <br><br>
-    Username:&emsp;&emsp;&ensp; <input type="text" name="id">
+    Username:&emsp;&emsp;&ensp; <input type="text" id="id">
     <br><br>
-    New Password:&ensp; <input type="password" name="pass">
+    New Password:&ensp; <input type="password" id="npass">
     <br><br>
-    Confirm :&emsp;&emsp;&emsp; <input type="password" name="pass">
+    Confirm :&emsp;&emsp;&emsp; <input type="password" id="cpass">
     <br><br><br>
     <input type="button" value="Back" onclick="history.back()" class="button2">
     &emsp;&emsp;&emsp;&emsp;&emsp;
-    <input type="button" value="Register" onclick="location.href = 'login.html'" class="button1">
+    <input type="submit" value="Register" class="button1">
 </form>
 </center>
 
+<script>
+    function val()
+    {
+        var f=document.getElementById("fname").value;
+        var l=document.getElementById("lname").value;
+        var g=document.querySelector( 'input[name="gender"]:checked');
+        var a=document.getElementById("address").value;
+        var i=document.getElementById("id").value;
+        var np=document.getElementById("npass").value;
+        var cp=document.getElementById("cpass").value;
+        if(f=="")
+        {
+            alert("First Name can not be empty");
+        //  document.getElementById("pass").value=upass;
+            return false;
+        }
+        if(l=="")
+        {
+            alert("Last Name can not be empty");
+        //  document.getElementById("id").value=uid;
+            return false;
+        }
+        if(g==null) {
+        alert("Please select a gender");
+        
+        return false;
+        }
+
+        if(np=="")
+        {
+            alert("Password can not be empty");
+            return false;
+        }
+        if(cp=="")
+        {
+            alert("Password can not be empty");
+            return false;
+        }
+
+        if(np!=cp)
+        {
+            alert("Passwords do not match");
+            return false;
+        }
+
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(n.value))
+        {
+            return true;
+
+        }
+
+        else if(n=="")
+        {
+            alert("Username can not be empty");
+        //  document.getElementById("id").value=uid;
+            return false;
+        }
+
+
+
+    }
+
+</script>
 </body>
 </html>

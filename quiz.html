@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <br>
+<font style = "margin-left: 80px;" size=6 color=#FE7E6D><a href="index.html" style = "color:#FE7E6D;"><img src="Euphoria1.png" height=40 width=40 valign=middle>&ensp;Euphoria</a></font>
+<font size=4 style = "margin-left: 400px;" class="menu"><a href=index.html>Home</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=images.html>Essentials</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=index.html>Book A Nurse</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=index.html>Covid-19 Tests</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=aboutus.html>About Euporia</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=login.html><img src="user.svg" valign=middle>Log in</a></font>
+<br><br><br><br>
+
+<center>
+    <img src="quizz.svg" height="300px" width="300px"><br><br>
+    <form>
+    <div class="boxed">
+        1. Which of the following accommodations may be specific to students with physical disabilities?<br><br>
+        <input type="radio" id="op1" name="q1" value="1" onclick="question1()"><label id="l1" for="op1">Oral testing rather than written testing</label>&emsp;
+        <input type="radio" id="op2" name="q1" value="2" onclick="question1()"><label id="l2" for="op2">Frequent breaks during the test</label><br><br>
+        <input type="radio" id="op3" name="q1" value="3" onclick="question1()"><label id="l3" for="op3">Physical access to the testing site</label>&emsp;
+        <input type="radio" id="op4" name="q1" value="4" onclick="question1()"><label id="l4" for="op4">Additional time to take the test</label>
+        <br><br><br><br><br><br>
+        
+        2. Which of the following refers to a malformation of the spinal cord before birth?<br><br>
+        <input type="radio" id="op21" name="q2" value="1" onclick="question2()"><label id="l21" for="op21">Muscular Dystrophy</label>&emsp;
+        <input type="radio" id="op22" name="q2" value="2" onclick="question2()"><label id="l22" for="op22">Cerebral palsy</label><br><br>
+        <input type="radio" id="op23" name="q2" value="3" onclick="question2()"><label id="l23" for="op23">Multiple sclerosis</label>&emsp;
+        <input type="radio" id="op24" name="q2" value="4" onclick="question2()"><label id="l24" for="op24">Spina Bifida</label>
+        <br><br><br><br><br><br>
+        
+        3. What term do educators use to refer to a severe orthopedic impairment that adversely affects a child's educational performance?<br><br>
+        <input type="radio" id="op31" name="q3" value="1" onclick="question3()"><label id="l31" for="op31">Other health impairments</label>&emsp;
+        <input type="radio" id="op32" name="q3" value="2" onclick="question3()"><label id="l32" for="op32">Orthopedic impairments</label><br><br>
+        <input type="radio" id="op33" name="q3" value="3" onclick="question3()"><label id="l33" for="op33">Physical disabilities</label>&emsp;
+        <input type="radio" id="op34" name="q3" value="4" onclick="question3()"><label id="l34" for="op34">Cerebral palsy</label>
+        <br><br><br><br><br><br>
+            
+        4. The most common educational placement for students with physical disabilities is:<br><br>
+        <input type="radio" id="op41" name="q4" value="1" onclick="question4()"><label id="l41" for="op41">Regular class</label>&emsp;
+        <input type="radio" id="op42" name="q4" value="2" onclick="question4()"><label id="l42" for="op42">Home school</label><br><br>
+        <input type="radio" id="op43" name="q4" value="3" onclick="question4()"><label id="l43" for="op43">Resource room</label>&emsp;
+        <input type="radio" id="op44" name="q4" value="4" onclick="question4()"><label id="l44" for="op44">Separate setting</label>
+        <br><br><br><br><br><br>
+            
+        5. Which of the following is a disorder that affects movement and muscle posture, and is due to damage in the brain?<br><br>
+        <input type="radio" id="op51" name="q5" value="1" onclick="question5()"><label id="l51" for="op51">Muscular Dystrophy</label>&emsp;
+        <input type="radio" id="op52" name="q5" value="2" onclick="question5()"><label id="l52" for="op52">ALS</label><br><br>
+        <input type="radio" id="op53" name="q5" value="3" onclick="question5()"><label id="l53" for="op53">Cerebral Palsy</label>&emsp;
+        <input type="radio" id="op54" name="q5" value="4" onclick="question5()"><label id="l54" for="op54">Osteogenesis Imperfecta</label>
+        <br><br><br><br><br><br>
+
+    </div>
+    </form>
+</center>
+<script>
+    function question1()
+    {
+        var q1=document.querySelector( 'input[name="q1"]:checked');
+
+        if(q1.value=="3")
+        {
+        document.getElementById("l3").style.backgroundColor = "#00ff73";
+        }
+        else
+        document.getElementById("l3").style.backgroundColor = "#000000";
+    }
+
+    function question2()
+    {
+        var q2=document.querySelector( 'input[name="q2"]:checked');
+
+        if(q2.value=="4")
+        {
+        document.getElementById("l24").style.backgroundColor = "#00ff73";
+        }
+        else
+        document.getElementById("l24").style.backgroundColor = "#000000";
+    }
+
+    function question3()
+    {
+        var q3=document.querySelector( 'input[name="q3"]:checked');
+
+        if(q3.value=="3")
+        {
+        document.getElementById("l33").style.backgroundColor = "#00ff73";
+        }
+        else
+        document.getElementById("l33").style.backgroundColor = "#000000";
+    }
+
+    function question4()
+    {
+        var q4=document.querySelector( 'input[name="q4"]:checked');
+
+        if(q4.value=="1")
+        {
+        document.getElementById("l41").style.backgroundColor = "#00ff73";
+        }
+        else
+        document.getElementById("l41").style.backgroundColor = "#000000";
+    }
+
+    function question5()
+    {
+        var q5=document.querySelector( 'input[name="q5"]:checked');
+
+        if(q5.value=="3")
+        {
+        document.getElementById("l53").style.backgroundColor = "#00ff73";
+        }
+        else
+        document.getElementById("l53").style.backgroundColor = "#000000";
+    }
+</script>
+
+</body>
+</html>

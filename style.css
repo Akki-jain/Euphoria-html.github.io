@@ -77,3 +77,52 @@ body {
     background-position: right top;
     background-size:cover;
 }
+
+.quizz {
+    margin-top: 3em;
+    margin-left: 3em;
+    font-family: "monaco", monospace;   
+}
+
+/* .options {
+    background-color: #000000;
+    border: none;
+    width: 300px;
+    color: #ffffff;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+.boxed:hover {
+    color: #ff2525;
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
+} */
+
+.boxed{
+    font-family: "monaco", monospace;
+}
+
+.boxed label {
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align-last: center;
+    background-color: #000000;
+    border-radius: 1em;
+    color:#ffffff;
+    transition: all 0.3s;
+  }
+  
+  .boxed input[type="radio"] {
+    display: none;
+  }
+  
+  .boxed input[type="radio"]:checked + label {
+    background-color: #FE7E6D;
+  }
+
