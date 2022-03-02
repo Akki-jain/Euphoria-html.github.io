@@ -18,7 +18,7 @@
 <br><br><br>
 
 <center>
-<form method="POST" action="index.html" onsubmit="return val()">
+<form method="POST" action="index.html" onsubmit="return val()" class="reg">
     <img src="Euphoria1.png" height=75 width=75 valign=bottom><font size=7 color=FE7E6D>Euphoria</font>
     <br><br><br>
     First Name:&emsp;&emsp; <input type="text" id="fname" >
@@ -68,8 +68,8 @@
             return false;
         }
         if(g==null) {
+            // alert(g.value);
         alert("Please select a gender");
-        
         return false;
         }
 
@@ -90,21 +90,18 @@
             return false;
         }
 
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(n.value))
-        {
-            return true;
+        // if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(n.value))
+        // {
+        //     return true;
 
-        }
+        // }
 
-        else if(n=="")
-        {
-            alert("Username can not be empty");
-        //  document.getElementById("id").value=uid;
-            return false;
-        }
-
-
-
+        // else if(n=="")
+        // {
+        //     alert("Username can not be empty");
+        // //  document.getElementById("id").value=uid;
+        //     return false;
+        // }
     }
 
 </script>
