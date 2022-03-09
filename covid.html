@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> Euphoria | Homepage </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<style>
+div{
+    margin-left:80px;
+    align-items: center;
+}
+.heading
+{
+    margin-top: 70px;
+    font-family: "monaco", monospace;
+    margin-right: 160px;
+}
+</style>
+</head>
+<body>
+<br>
+<font style = "margin-left: 80px;" size=6 color=FE7E6D><a href="index.html" style = "color:FE7E6D;"><img src="Euphoria1.png" height=40 width=40 valign=middle>&ensp;Euphoria</a></font>
+<font size=4 style = "margin-left: 400px;" class="menu"><a href=index.html>Home</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=images.html>Essentials</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=index.html>Book A Nurse</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=index.html>Covid-19 Tests</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=aboutus.html>About Euporia</a></font>
+<font size=4 style = "margin-left: 50px;" class="menu"><a href=login.html><img src="user.svg" valign=middle>Log in</a></font>
+
+<br><br><br><br><br><br>
+<hr><br>
+<font size="6" face="monospace"><center>Centers in Bangalore</font><br><br>
+    <hr><br>
+<font size="4" face="monospace">Today's date:</font>
+<font size="4" face="monospace" id="date">Today's date:
+</center>
+<br><br>
+<p><h3 id="list" style="text-align:center"></h3></center></p>
+<br><br>
+<p><center><button id="button5" class="button1" onclick="clickevent2()"> Previous </button> &emsp; <button id="button4" class="button1" onclick="clickevent()"> Next </button></center></p>
+</font>
+
+<script language="javascript" type="text/javascript">
+
+    var d = new Date();
+    var day = d.getDate();
+    document.getElementById("date").innerHTML = day;
+    const first = ["..1..", "BIMS", "Bowring Medical College", "Victoria Hospital", "Command Hospital", "HAL Hospital", "RajaRajeshwari Medical College"];
+    let n = first.length;
+    const second = ["..2..", "Chigateri Hospital", "Wenlock Hospital", "ESIC Medical College Hospital", "	KIMS, Kodagu", "Rajiv Gandhi Superspeciality Hospital", "Kandaya Bhavana"];
+    let n2 = second.length;
+    var text = "";
+    for (let i = 0; i < n; i++) {
+        text += first[i] + "<br>";
+    }
+    document.getElementById("list").innerHTML = text;
+    function clickevent() {
+        var text = "";
+        for (let i = 0; i < n2; i++) {
+            text += second[i] + "<br>";
+        }
+        document.getElementById("list").innerHTML = text;
+    }
+    function clickevent2() {
+        var text = "";
+        for (let i = 0; i < n; i++) {
+            text += first[i] + "<br>";
+        }
+        document.getElementById("list").innerHTML = text;
+    }
+</script>
+
+</body>
+</html>
